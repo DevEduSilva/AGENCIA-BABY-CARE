@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+body {
+  background-color: #508ddb;
+  font-family: "Nunito", sans-serif;
+}
+
+/* ------------------------------- MAIN ------------------------------- */
+
+main {
+  background-color: #508ddb;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: columns;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 50px;
+}
+
+main img {
+  height: 360px;
+}
+
+article {
+  display: grid;
+  row-gap: 20px;
+}
+
+.theTitle {
+  font-size: 3.5rem;
+  text-align: center;
+  color: #b0d7f6;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+}
+main h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+}
+
+main button {
+  font-size: 16px;
+  position: relative;
+  margin: auto;
+  padding: 1em 2.5em 1em 2.5em;
+  border: none;
+  background: #fff;
+  transition: all 0.1s linear;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+}
+
+main button:active {
+  transform: scale(0.95);
+}
+
+main button span {
+  color: #2c2c5d;
+  font-weight: 700;
+}
+
+main button .border {
+  position: absolute;
+  border: 0.15em solid #fff;
+  transition: all 0.3s 0.08s linear;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2.9em;
+  transform: translate(-50%, -50%);
+}
+
+main button:hover .border {
+  display: block;
+  width: 102%;
+  height: 3.4em;
+}
+
+.full-rounded {
+  border-radius: 2em;
+}
+
+/* Media Query do MAIN */
+/* PARA DISPOSITVOS MÓVEIS */
+@media screen and (max-width: 767px) {
+  main {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+  }
+
+  main h3 {
+    font-size: 1rem;
+  }
+
+  main img {
+    margin-top: 50px;
+    height: 200px;
+  }
+}
+
+/* PARA TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  main h1 {
+    font-size: 3rem;
+  }
+
+  main h3 {
+    font-size: 1.1rem;
+  }
+
+  main img {
+    height: 300px;
+  }
+}
+
+/* PARA TELAS GRANDES */
+@media (min-width: 1367px) {
+  main {
+    flex-direction: row;
+    gap: 150px;
+  }
+
+  main h1 {
+    font-size: 3.5rem;
+  }
+
+  main h3 {
+    font-size: 1.2rem;
+  }
+
+  main img {
+    height: 500px;
+  }
+}
+
+/* ---------------------------- About ---------------------------- */
+.backgroundwhite {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.7)
+  );
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#centralizar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#about {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  width: 80%;
+  max-width: 900px;
+  margin: 3vh auto;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+#about img {
+  width: 50%;
+  height: 62vh;
+  border-radius: 25%;
+}
+
+#gotoabout button {
+  font-size: 16px;
+  position: relative;
+  margin: auto;
+  padding: 1em 2.5em 1em 2.5em;
+  border: none;
+  background: #2C8CF4;
+  transition: all 0.1s linear;
+  box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+}
+
+#gotoabout button:active {
+  transform: scale(0.95);
+}
+
+#gotoabout button span {
+  color: #fff;
+  font-weight: 700;
+}
+
+#gotoabout button .border {
+  position: absolute;
+  border: 0.15em solid #fff;
+  transition: all 0.3s 0.08s linear;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2.9em;
+  transform: translate(-50%, -50%);
+}
+
+#gotoabout button:hover .border {
+  display: block;
+  width: 102%;
+  height: 3.4em;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #2c3e50;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+#about h3 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #2c3e50;
+}
+
+#about p {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  text-align: justify;
+  margin-top: 20px;
+  width: 90%;
+  line-height: 1.6;
+}
+
+/* Media Queries do About */
+/* PARA DISPOSITIVOS MÓVEIS */
+@media screen and (max-width: 767px) {
+  #centralizar {
+    flex-direction: column;
+  }
+
+  #about {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #about img {
+    width: 80%;
+    height: 300px;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  #about h3 {
+    font-size: 1.5rem;
+  }
+
+  #about p {
+    width: 100%;
+  }
+}
+
+/* PARA TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #about {
+    width: 70%;
+    padding: 30px;
+  }
+
+  #about h2 {
+    font-size: 2.2rem;
+  }
+
+  #about h3 {
+    font-size: 1.6rem;
+  }
+
+  #about p {
+    width: 100%;
+  }
+}
+
+/* PARA TELAS GRANDES */
+@media (min-width: 1367px) {
+  #about {
+    width: 60%;
+    padding: 40px;
+  }
+
+  #about h2 {
+    font-size: 2.5rem;
+  }
+
+
+  #about h3 {
+    font-size: 1.8rem;
+  }
+
+  #about p {
+    width: 100%;
+  }
+}
