@@ -199,7 +199,7 @@ main button:hover .border {
   margin: auto;
   padding: 1em 2.5em 1em 2.5em;
   border: none;
-  background: #2C8CF4;
+  background: #2c8cf4;
   transition: all 0.1s linear;
   box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
 }
@@ -317,7 +317,6 @@ main button:hover .border {
     font-size: 2.5rem;
   }
 
-
   #about h3 {
     font-size: 1.8rem;
   }
@@ -325,4 +324,19 @@ main button:hover .border {
   #about p {
     width: 100%;
   }
+}
+
+/* --------------------------- Services --------------------------- */
+
+.containerServices {
+  width: 100vw;
+  height: 80vh;
+  padding: 50px 0px;
+  text-align: center;
+  background-color: rgb(221, 221, 0);
+}
+
+#services .theTitle {
+  margin-bottom: 11vh;
+  color: black;
 }
