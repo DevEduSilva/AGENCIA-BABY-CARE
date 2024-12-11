@@ -14,6 +14,8 @@
   <!-- ARQUIVOS CSS -->
   <!-- GERAL -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- SLIDER -->
+  <link rel="stylesheet" href="assets/css/slider.css">
   <!-- HEADER -->
   <link rel="stylesheet" href="assets/css/header.css" />
   <!-- FOOTER -->
@@ -23,6 +25,9 @@
   <!-- GERAL -->
   <script src="assets/js/header.js" defer></script>
   <script src="assets/js/shortcutsFromHeaders.js" defer></script>
+
+  <!-- Slider -->
+  <script src="assets/js/slider.js" defer></script>
 </head>
 
 <body id="inicio">
@@ -91,10 +96,16 @@
 
   <div id="services">
     <section class="containerServices">
-      <h2>QUEM SOMOS?</h2>
+      <h2 class="theTitle" style="color: black;">NOSSOS SERVIÇOS</h2>
 
-
-
+      <div class="mobile-slider">
+        <div class="card-container">
+          <div class="card-inner">1</div>
+          <div class="card-inner">2</div>
+          <div class="card-inner">3</div>
+          <div class="card-inner">4</div>
+        </div>
+      </div>
 
     </section>
   </div>
@@ -103,7 +114,7 @@
   <!-- Footer -->
   <footer>
     <div id="icons">
-      <a href="https://wa.me/+556195705982"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/+55615555555555555" onclick="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
     <p>&copy;2024 <strong>Agência</strong>BabyCare</p>
   </footer>
