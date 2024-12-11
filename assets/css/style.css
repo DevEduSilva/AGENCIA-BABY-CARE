@@ -340,3 +340,39 @@ main button:hover .border {
   margin-bottom: 11vh;
   color: black;
 }
+
+/* --------------------------- whatWait --------------------------- */
+#about{
+  height: 80vh;
+}
+
+#whatWait .theTitle {
+  margin-bottom: 15vh;
+}
+.options-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.button {
+  background-color: #cacaca;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  height: 90vw;
+  max-height: 61px;
+  width: 90%;
+  max-width: 392px;
+  padding: 0 32px;
+
+  transition: filter 0.2s;
+}
+
+/* Só vai funcionar em botão ativado */
+.button:not(:disabled):hover {
+  filter: brightness(0.8);
+}
