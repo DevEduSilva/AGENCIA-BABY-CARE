@@ -342,7 +342,7 @@ main button:hover .border {
 }
 
 /* --------------------------- whatWait --------------------------- */
-#about{
+#about {
   height: 80vh;
 }
 
@@ -350,10 +350,13 @@ main button:hover .border {
   margin-bottom: 15vh;
 }
 .options-container {
-  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 0 20px; 
 }
 
 .button {
@@ -361,18 +364,69 @@ main button:hover .border {
   color: black;
   font-size: 16px;
   font-weight: bold;
-  border: 0;
+  border: none;
   border-radius: 6px;
-  height: 90vw;
-  max-height: 61px;
-  width: 90%;
-  max-width: 392px;
+  height: 60px;
+  width: 100%; 
   padding: 0 32px;
-
-  transition: filter 0.2s;
+  transition: filter 0.2s, transform 0.2s;
 }
 
-/* Só vai funcionar em botão ativado */
 .button:not(:disabled):hover {
   filter: brightness(0.8);
+  transform: scale(1.05);
+}
+
+/* ------------------------------HowWorks------------------------------ */
+
+#servicesHowWorks {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.works {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#servicesHowWorks p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.containerOptionsType {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.typeOption {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.typeOption:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imgOptionType {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.subtitleOptionType {
+  font-size: 1rem;
+  color: #333;
+  padding: 15px 10px;
 }
