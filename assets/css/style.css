@@ -12,7 +12,9 @@ body {
   background-color: #508ddb;
   font-family: "Nunito", sans-serif;
 }
-
+.hide {
+  display: none;
+}
 /* ------------------------------- MAIN ------------------------------- */
 
 main {
@@ -159,7 +161,7 @@ main button:hover .border {
     rgba(255, 255, 255, 0.9),
     rgba(255, 255, 255, 0.7)
   );
-  width: 100vw;
+  width: 100%;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
@@ -171,7 +173,7 @@ main button:hover .border {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
 }
 
 #about {
@@ -247,7 +249,7 @@ main button:hover .border {
   color: #2c3e50;
 }
 
-#about p {
+.theText {
   color: #2c3e50;
   font-size: 1.2rem;
   text-align: justify;
@@ -329,11 +331,11 @@ main button:hover .border {
 /* --------------------------- Services --------------------------- */
 
 .containerServices {
-  width: 100vw;
   height: 80vh;
   padding: 50px 0px;
   text-align: center;
-  background-color: rgb(221, 221, 0);
+  background-color: rgb(255, 255, 147);
+  background-color: #fff;
 }
 
 #services .theTitle {
@@ -342,7 +344,7 @@ main button:hover .border {
 }
 
 /* --------------------------- whatWait --------------------------- */
-#about {
+#whatWait #about {
   height: 80vh;
 }
 
@@ -351,12 +353,12 @@ main button:hover .border {
 }
 .options-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto; 
-  padding: 0 20px; 
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .button {
@@ -367,7 +369,7 @@ main button:hover .border {
   border: none;
   border-radius: 6px;
   height: 60px;
-  width: 100%; 
+  width: 100%;
   padding: 0 32px;
   transition: filter 0.2s, transform 0.2s;
 }
@@ -429,4 +431,150 @@ main button:hover .border {
   font-size: 1rem;
   color: #333;
   padding: 15px 10px;
+}
+
+/* ------------------------------values------------------------------ */
+
+#valuePage .pacote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  gap: 20px;
+}
+
+.centralizar {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.pacote-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pacote-header-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pacote-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pacote-form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.valorDinamico {
+  gap: 0;
+}
+
+label {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  color: #333;
+}
+
+.pacote-options label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+input[type="text"],
+textarea {
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+}
+
+.valorSelecionado {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.valorValue {
+  font-weight: 500;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.pacote-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pacote-button {
+  background-color: #7f89e0;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pacote-button:hover {
+  background-color: #5c68d3;
+  transform: scale(1.05);
+}
+
+.pacote-button:active {
+  transform: scale(0.95);
+}
+
+.containervalues2 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  text-align: justify;
+  width: 90%;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.obsImportante ul,
+li {
+  font-size: small;
+  text-align: justify;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.subtitleTextValues {
+  font-size: 1rem;
+  text-align: center;
+  color: #3b3b3b;
+  font-family: "Lilita One", sans-serif;
+  border-bottom: 1px solid #575757;
+}
+.observacoesU {
+  margin-top: 10px;
 }
