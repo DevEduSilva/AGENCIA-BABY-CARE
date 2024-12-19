@@ -12,9 +12,62 @@ body {
   background-color: #508ddb;
   font-family: "Nunito", sans-serif;
 }
+
 .hide {
   display: none;
 }
+#hide {
+  display: none;
+}
+
+/* BOTÃO WPP FIXO */
+/* Estilização do botão fixo */
+.fixed-button {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+/* Efeito de hover para o botão */
+.fixed-button:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries para responsividade */
+
+/* Dispositivos móveis */
+@media screen and (max-width: 767px) {
+  .fixed-button {
+    padding: 12px;
+    font-size: 25px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .fixed-button {
+    padding: 14px;
+    font-size: 19px;
+  }
+}
+
+/* Telas grandes */
+@media screen and (min-width: 1200px) {
+  .fixed-button {
+    padding: 16px;
+    font-size: 22px;
+  }
+}
+
 /* ------------------------------- MAIN ------------------------------- */
 
 main {
@@ -839,8 +892,8 @@ textarea {
 .fimDeSemana,
 .semanal,
 .qtdSemanal {
-  background: #f9f9f9; 
-  border: 1px solid #dddddd; 
+  background: #f9f9f9;
+  border: 1px solid #dddddd;
   border-radius: 10px;
   padding: 20px;
   width: 200px;
@@ -904,7 +957,7 @@ textarea {
     width: 80%;
   }
 
-  .theTitle {
+  #pacotesServices .theTitle {
     font-size: 2rem;
     letter-spacing: 1px;
   }
@@ -947,5 +1000,284 @@ textarea {
   .semanal,
   .qtdSemanal {
     width: 300px;
+  }
+}
+
+/* ---------------------------- Contato ---------------------------- */
+
+#contato {
+  padding: 40px;
+  background-color: #fff; /* Fundo branco */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+#contato h2 {
+  font-size: 2.5rem;
+  color: #333; /* Cor escura para contraste */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 2px solid #000; /* Harmonizando com botão contratar */
+  display: inline-block;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+form,
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 300px;
+}
+
+form label {
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+/* Estilo de campo válido (preenchido corretamente) */
+form input.valid,
+form textarea.valid {
+  border: 2px solid rgba(0, 128, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo de campo inválido (não preenchido) */
+form input.invalid,
+form textarea.invalid {
+  border: 2px solid rgba(255, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo para o checkbox */
+form input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+form label[style="display: flex;"] p {
+  margin: 0;
+  color: #333;
+}
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btnback {
+  font-size: 15px;
+  border: none;
+  background: #e74c3c;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.btnSend {
+  font-size: 15px;
+  border: none;
+  background: green;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+form button:active {
+  transform: scale(0.97);
+}
+
+#escolhaFormularioUnico {
+  justify-content: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #e74c3c;
+}
+
+.contact-info iframe {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Botão exclusivo "Contratar uma babá" */
+.contratarUnico {
+  background-color: #ffd8b1; /* Laranja pastel */
+  color: #4a3f35;
+}
+
+/* Botão exclusivo "Trabalhar como babá" */
+.trabalharUnico {
+  background-color: #b3e5fc; /* Azul pastel */
+  color: #2c3e50;
+}
+
+.btnUnico{
+  font-size: 15px;
+  border: none;
+  color: #8f8f8f;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+/* Efeito hover para os botões */
+.btnUnico:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 198, 198, 0.2);
+}
+
+/* Efeito ao pressionar */
+.btnUnico:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------------- Media Queries ---------------------------- */
+
+/* Dispositivos móveis (até 767px) */
+@media screen and (max-width: 767px) {
+  #contato {
+    padding: 20px;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  #contato h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  form,
+  .contact-info {
+    width: 100%;
+    gap: 10px;
+  }
+
+  form input,
+  form textarea {
+    width: 95%;
+  }
+
+  form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablets (768px a 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #contato {
+    padding: 30px;
+    width: 90%;
+  }
+
+  #contato h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-container {
+    gap: 30px;
+  }
+
+  form button {
+    font-size: 17px;
+    padding: 0.8em 2.5em;
+  }
+
+  .contact-item i {
+    font-size: 1.4rem;
+  }
+}
+
+/* Telas grandes (a partir de 1200px) */
+@media screen and (min-width: 1200px) {
+  #contato {
+    padding: 50px;
+    width: 75%;
+    margin: 40px auto;
+  }
+
+  #contato h2 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+  }
+
+  .contact-container {
+    gap: 50px;
+  }
+
+  form button {
+    font-size: 20px;
+    padding: 1.2em 3.5em;
+  }
+
+  .contact-item i {
+    font-size: 1.8rem;
+  }
+
+  .contact-info iframe {
+    max-width: 600px;
   }
 }

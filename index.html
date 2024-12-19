@@ -31,6 +31,9 @@
 </head>
 
 <body id="inicio">
+
+    <a class="fixed-button" href="https://wa.me/+55615555555555555" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
   <!-- Header -->
   <header>
     <button class="menu-icon" aria-label="Toggle navigation" onclick="toggleMenu()">
@@ -245,14 +248,124 @@
     </section>
   </div>
 
+  <!-- Página contato-->
+  <div id="contatoPage">
+    <div class="backgroundwhite">
+      <!-- Página contato -->
+      <section id="contato">
+        <h2 class="theTitle">Contato</h2>
+        <div class="contact-container">
+          <form id="escolhaFormularioUnico" class="">
+            <button class="btnUnico contratarUnico">CONTRATAR UMA BABÁ</button>
+            <button class="btnUnico trabalharUnico">TRABALHAR COMO BABÁ</button>
+          </form>
+
+          <form id="meuFormulario" class="hide">
+            <h3>INFORMAÇÕES NECESSÁRIAS:</h3>
+
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
+
+            <label for="endereco">Endereço completo:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço completo" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="9" required>
+
+            <label for="datas-horarios">Descreva as datas e horários que precisa da babá:</label>
+            <textarea id="datas-horarios" name="datas-horarios" placeholder="Exemplo: Segunda e Quarta das 14h às 18h"
+              rows="4" required></textarea>
+
+            <label style="display: flex; align-items: center; gap: 10px;">
+              <input type="checkbox" id="accept" name="accept" required>
+              <p>Concordo em enviar meus dados e que entrem em contato para demais informações!</p>
+            </label>
+
+            <div class="formButtons">
+              <button class="btnback">VOLTAR</button>
+              <button class="btnSend" type="submit">ENVIAR</button>
+            </div>
+
+          </form>
+
+          <form id="formularioBabá" class="hide">
+            <h3>FICHA DE DADOS PARA BÁBAS:</h3>
+
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="telefone">Telefone para contato:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
+
+            <label for="endereco">Endereço completo:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço completo" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="9" required>
+
+            <label for="experiencia">Tem experiência como babá?</label>
+            <select id="experiencia" name="experiencia" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+
+            <label>Disponibilidade para trabalhar em qual horário:</label>
+            <div>
+              <label>
+                <input type="checkbox" name="disponibilidade" value="manhã">
+                Manhã
+              </label>
+              <label>
+                <input type="checkbox" name="disponibilidade" value="tarde">
+                Tarde
+              </label>
+              <label>
+                <input type="checkbox" name="disponibilidade" value="noite">
+                Noite
+              </label>
+            </div>
+
+            <label for="curriculo">Anexar currículo:</label>
+            <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+
+            <div class="formButtons">
+              <button class="btnback">VOLTAR</button>
+              <button class="btnSend" type="submit">ENVIAR</button>
+            </div>
+          </form>
+
+          <div class="contact-info" id="">
+            <div class="contact-item">
+              <i class="fab fa-whatsapp"></i> <!-- Ícone de WhatsApp -->
+              <p>(61) 98122-6800 </p>
+              <i class="fab fa-whatsapp"></i> <!-- Ícone de WhatsApp -->
+              <p>(63) 99109-1576</p>
+            </div>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d68939.0273507708!2d-48.04060554500308!3d-15.824730602269677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1734637437307!5m2!1spt-BR!2sbr"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
 
 
   <!-- Footer -->
   <footer>
-    <div id="icons">
-      <a href="https://wa.me/+55615555555555555" onclick="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
     <p>&copy;2024 <strong>Agência</strong>BabyCare</p>
+    <img src="assets/img/logo.png" alt="Logo do site" onclick="goTohome()" />
+    <div id="icons">
+      <a href="https://wa.me/+55615555555555555" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/agenciababycare_" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/agenciababycare_" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
   </footer>
 </body>
 
