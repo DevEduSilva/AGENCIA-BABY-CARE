@@ -346,11 +346,21 @@ main button:hover .border {
 /* --------------------------- whatWait --------------------------- */
 #whatWait #about {
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 #whatWait .theTitle {
+  font-size: 2rem;
   margin-bottom: 15vh;
+  color: #333;
 }
+
 .options-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -359,6 +369,7 @@ main button:hover .border {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .button {
@@ -372,6 +383,7 @@ main button:hover .border {
   width: 100%;
   padding: 0 32px;
   transition: filter 0.2s, transform 0.2s;
+  cursor: pointer;
 }
 
 .button:not(:disabled):hover {
@@ -379,21 +391,78 @@ main button:hover .border {
   transform: scale(1.05);
 }
 
-/* Media Query do whatWait */
-/* PARA DISPOSITVOS MÓVEIS */
+/* PARA DISPOSITIVOS MÓVEIS */
 @media screen and (max-width: 767px) {
+  #whatWait #about {
+    height: auto;
+    padding: 20px 10px;
+  }
 
+  #whatWait .theTitle {
+    font-size: 1.5rem;
+    margin-bottom: 10vh;
+  }
+
+  .options-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 90%;
+  }
+
+  .button {
+    font-size: 14px;
+    height: 50px;
+    padding: 0 20px;
+  }
 }
 
 /* PARA TABLETS */
 @media (min-width: 768px) and (max-width: 1024px) {
+  #whatWait #about {
+    padding: 40px 20px;
+  }
 
+  #whatWait .theTitle {
+    font-size: 2rem;
+    margin-bottom: 12vh;
+  }
+
+  .options-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 700px;
+  }
+
+  .button {
+    font-size: 15px;
+    height: 55px;
+    padding: 0 24px;
+  }
 }
 
 /* PARA TELAS GRANDES */
 @media (min-width: 1367px) {
+  #whatWait #about {
+    height: 90vh;
+  }
 
+  #whatWait .theTitle {
+    font-size: 2.5rem;
+    margin-bottom: 18vh;
+  }
+
+  .options-container {
+    gap: 25px;
+    max-width: 1000px;
+  }
+
+  .button {
+    font-size: 18px;
+    height: 70px;
+    padding: 0 32px;
+  }
 }
+
 /* ------------------------------HowWorks------------------------------ */
 
 #servicesHowWorks {
@@ -448,6 +517,70 @@ main button:hover .border {
   padding: 15px 10px;
 }
 
+/* PARA DISPOSITIVOS MÓVEIS */
+@media screen and (max-width: 767px) {
+  .works {
+    font-size: 1.5rem;
+  }
+
+  #servicesHowWorks p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .typeOption {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .subtitleOptionType {
+    font-size: 0.9rem;
+  }
+}
+
+/* PARA TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .works {
+    font-size: 1.8rem;
+  }
+
+  #servicesHowWorks p {
+    font-size: 1rem;
+  }
+
+  .typeOption {
+    width: 45%;
+  }
+
+  .subtitleOptionType {
+    font-size: 1rem;
+  }
+}
+
+/* PARA TELAS GRANDES */
+@media (min-width: 1367px) {
+  .works {
+    font-size: 2.5rem;
+  }
+
+  #servicesHowWorks p {
+    font-size: 1.2rem;
+  }
+
+  .containerOptionsType {
+    gap: 30px;
+  }
+
+  .typeOption {
+    width: 220px;
+  }
+
+  .subtitleOptionType {
+    font-size: 1.1rem;
+  }
+}
+
+
 /* ------------------------------values------------------------------ */
 
 #valuePage .pacote-container {
@@ -463,12 +596,16 @@ main button:hover .border {
   margin: 30px auto;
   transition: transform 0.3s, box-shadow 0.3s;
   gap: 20px;
+  box-sizing: border-box;
 }
 
 .centralizar {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .pacote-header {
@@ -476,28 +613,35 @@ main button:hover .border {
   margin-bottom: 20px;
 }
 
-.pacote-header-text {
+.pacote-header .theTitle {
   font-size: 24px;
   font-weight: bold;
   color: #333;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border-bottom: 1px solid #575757;
+
 }
 
 .pacote-form {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
 .pacote-form-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 15px;
+  width: 100%;
 }
 
 .valorDinamico {
-  gap: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 label {
@@ -509,34 +653,33 @@ label {
 .pacote-options label {
   margin-bottom: 10px;
   display: block;
+  cursor: pointer;
 }
 
 input[type="radio"] {
   margin-right: 10px;
 }
 
-input[type="text"],
-textarea {
-  padding: 12px;
-  border: none;
-  font-size: 16px;
-  color: #333;
-  width: 100%;
-}
-
 .valorSelecionado {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  align-items: center;
 }
 
 .valorValue {
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
 textarea {
   resize: vertical;
   height: 100px;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
 }
 
 .pacote-footer {
@@ -567,20 +710,23 @@ textarea {
 
 .containervalues2 {
   color: #2c3e50;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: justify;
-  width: 90%;
+  width: 100%;
   line-height: 1.6;
   font-family: "Nunito", sans-serif;
-
 }
 
-.obsImportante ul,
-li {
-  font-size: small;
-  text-align: justify;
-  font-family: "Nunito", sans-serif;
+.obsImportante ul {
+  margin: 0;
+  padding-left: 20px;
+}
 
+.obsImportante li {
+  font-size: 0.9rem;
+  text-align: justify;
+  line-height: 1.4;
+  font-family: "Nunito", sans-serif;
 }
 
 .subtitleTextValues {
@@ -590,6 +736,61 @@ li {
   font-family: "Lilita One", sans-serif;
   border-bottom: 1px solid #575757;
 }
+
 .observacoesU {
   margin-top: 10px;
+}
+
+/* Media Query do values */
+/* PARA DISPOSITIVOS MÓVEIS */
+@media screen and (max-width: 767px) {
+  .pacote-header-text {
+    font-size: 20px;
+  }
+
+  .centralizar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pacote-form-group {
+    align-items: center;
+  }
+
+  .valorValue {
+    font-size: 1rem;
+  }
+
+  .pacote-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* PARA TABLETS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .pacote-header-text {
+    font-size: 22px;
+  }
+
+  .centralizar {
+    gap: 40px;
+  }
+
+  .pacote-button {
+    font-size: 17px;
+    padding: 12px 24px;
+  }
+}
+
+/* PARA TELAS GRANDES */
+@media (min-width: 1367px) {
+  .pacote-header-text {
+    font-size: 26px;
+  }
+
+  .pacote-button {
+    font-size: 20px;
+    padding: 14px 28px;
+  }
 }
