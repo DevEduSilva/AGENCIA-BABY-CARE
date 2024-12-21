@@ -24,7 +24,6 @@
   <!-- Arquivos JS -->
   <!-- GERAL -->
   <script src="assets/js/header.js" defer></script>
-  <script src="assets/js/shortcutsFromHeaders.js" defer></script>
 
   <!-- Slider -->
   <script src="assets/js/slider.js" defer></script>
@@ -35,7 +34,7 @@
 
 <body id="inicio">
 
-  <a class="fixed-button" href="https://wa.me/+55615555555555555" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a class="fixed-button" href="https://wa.me/+5563991091576" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
   <!-- Header -->
   <header>
@@ -48,11 +47,11 @@
     <nav>
       <ul>
         <li><a onclick="goTohome()">PÁGINA INICIAL</a></li>
-        <li><a onclick="goToAbout()">QUEM SOMOS</a></li>
-        <li><a onclick="">COMO FUNCIONA</a></li>
-        <li><a onclick="">PACOTES</a></li>
-        <li><a onclick="">CONTATO</a></li>
-        <li><a onclick="">TRABALHE CONOSCO</a></li>
+        <li><a onclick="goToSection('gotoabout')">QUEM SOMOS</a></li>
+        <li><a onclick="goToSection('services')">SERVIÇOS</a></li>
+        <li><a onclick="goToSection('servicesHowWorks')">COMO FUNCIONA</a></li>
+        <li><a onclick="goToSection('pacotesServices')">PACOTES</a></li>
+        <li><a onclick="goToSection('contatoPage')">CONTATO</a></li>
       </ul>
     </nav>
   </header>
@@ -64,7 +63,7 @@
         BABY CARE
       </h1>
       <h3>Onde carinho e cuidados são de casa</h3>
-      <button class="full-rounded btnCta" id="ctaaboutHome" onclick="goToAbout()">
+      <button class="full-rounded btnCta" id="ctaaboutHome" onclick="goToSection('gotoabout')">
         <span>VENHA CONHECER</span>
         <div class="border full-rounded"></div>
       </button>
@@ -144,11 +143,11 @@
       <p>Você pode optar pela melhor opção de forma fácil e rápida!</p>
 
       <div class="containerOptionsType">
-        <div class="typeOption">
+        <div class="typeOption" onclick="goToSection('valuePage')">
           <img src="assets/img/about.jpg" alt="" class="imgOptionType">
           <p class="subtitleOptionType">HORA AVULSA</p>
         </div>
-        <div class="typeOption">
+        <div class="typeOption" onclick="goToSection('pacotesServices')">
           <img src="assets/img/about.jpg" alt="" class="imgOptionType">
           <p class="subtitleOptionType">PACOTES</p>
         </div>
@@ -207,7 +206,7 @@
             </div>
           </div>
           <div class="pacote-footer">
-            <button class="pacote-button">CONHEÇA NOSSOS PACOTES !!!</button>
+            <button class="pacote-button" onclick="goToSection('pacotesServices')">CONHEÇA NOSSOS PACOTES !!!</button>
           </div>
         </div>
       </div>
@@ -249,7 +248,7 @@
           <p class="valoresPacotes"> 8h - R$ 4.000,00</p>
         </div>
       </div>
-      <button class="pacote-button"> GOSTOU? CONTRATE AGORA O QUE MELHOR TE ATENDER!</button>
+      <button class="pacote-button" onclick="goToSection('contatoPage')"> GOSTOU? CONTRATE AGORA O QUE MELHOR TE ATENDER!</button>
 
     </section>
   </div>
@@ -368,7 +367,7 @@
     <p>&copy;2024 <strong>Agência</strong>BabyCare</p>
     <img src="assets/img/logo.png" alt="Logo do site" onclick="goTohome()" />
     <div id="icons">
-      <a href="https://wa.me/+55615555555555555" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/+5563991091576" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/agenciababycare_" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/in/agenciababycare_" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
