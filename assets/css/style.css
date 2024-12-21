@@ -1256,8 +1256,15 @@ form button:active {
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   color: #333;
+  justify-content: center;
+}
+.contactContainerNumber{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
 }
 
 .contact-item i {
