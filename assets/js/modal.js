@@ -5,8 +5,8 @@ modalOverlay.id = 'modal-overlay';
 modalOverlay.innerHTML = `
   <div id="modal-content">
     <div class="modal-card">
-      <img src="assets/img/Lays.png" alt="Imagem da Lays">
-      <h3>Lays</h3>
+      <img src="assets/img/Lays.png" alt="Imagem da Laís">
+      <h3>Laís</h3>
       <p>Olá, sou a Laís! Com 7 anos de experiência como babá e graduando em Pedagogia, adoro cuidar de crianças de diferentes idades e necessidades. Agora, com <span id="more-lays" class="more-text"> minha própria agência, ofereço um serviço de confiança e carinho, com profissionais qualificados e dedicados a proporcionar um cuidado especial para cada criança. Será um prazer atender você e sua família.</span></p>
       <button class="btnModal" id="toggle-lays">LER MAIS</button>
     </div>
@@ -26,7 +26,10 @@ document.body.appendChild(modalOverlay);
 // Abertura do modal
 openModalButton.addEventListener('click', () => {
     modalOverlay.style.display = 'flex';
-    
+
+    // Desabilitar o scroll da página
+    document.body.style.overflow = 'hidden';
+
     // Resetar o estado dos botões para "LER MAIS" e esconder o texto extra
     resetModal();
 });
@@ -36,15 +39,20 @@ openModalButton.addEventListener('click', () => {
 const closeModalButton = modalOverlay.querySelector('#close-modal');
 closeModalButton.addEventListener('click', () => {
     modalOverlay.style.display = 'none';
+
+    // Restaurar o scroll da página
+    document.body.style.overflow = '';
 });
 
 //  Clicando fora
 modalOverlay.addEventListener('click', (e) => {
     if (e.target === modalOverlay) {
         modalOverlay.style.display = 'none';
+
+        // Restaurar o scroll da página
+        document.body.style.overflow = '';
     }
 });
-
 // Mostrar/ocultar texto extra (Ler Mais/Ler Menos) ----------------------------
 
 // Para Lays
@@ -86,7 +94,7 @@ function resetModal() {
 
     moreLaysText.style.display = 'none';
     toggleLaysButton.textContent = 'LER MAIS';
-    
+
     moreLeticiaText.style.display = 'none';
     toggleLeticiaButton.textContent = 'LER MAIS';
 }
