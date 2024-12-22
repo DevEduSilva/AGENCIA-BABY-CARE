@@ -261,7 +261,7 @@
       <section id="contato">
         <h2 class="theTitle">Contato</h2>
         <div class="contact-container">
-          <form id="escolhaFormularioUnico" class="">
+          <form id="escolhaFormularioUnico" class="" onclick="">
             <button class="btnUnico contratarUnico">CONTRATAR UMA BABÁ</button>
             <button class="btnUnico trabalharUnico">TRABALHAR COMO BABÁ</button>
           </form>
@@ -291,7 +291,7 @@
             </label>
 
             <div class="formButtons">
-              <button class="btnback">VOLTAR</button>
+              <button class="btnback" type="button" onclick="voltar()">Voltar</button>
               <button class="btnSend" type="submit">ENVIAR</button>
             </div>
 
@@ -339,12 +339,12 @@
             <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
 
             <div class="formButtons">
-              <button class="btnback">VOLTAR</button>
+              <button class="btnback" type="button" onclick="voltar()">Voltar</button>
               <button class="btnSend" type="submit">ENVIAR</button>
             </div>
           </form>
 
-          <div class="contact-info" id="">
+          <div class="contact-info">
             <div class="contact-item">
               <div class="contactContainerNumber">
                 <i class="fab fa-whatsapp"></i> <!-- Ícone de WhatsApp -->
@@ -377,6 +377,9 @@
       <a href="https://www.linkedin.com/in/agenciababycare_" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
   </footer>
+
+  <script src="assets/js/pageContato.js"></script>
+</html>
 </body>
 
 </html>

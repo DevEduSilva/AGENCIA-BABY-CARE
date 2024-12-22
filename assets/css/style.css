@@ -505,7 +505,6 @@ main button:hover .border {
   }
 }
 
-
 /* --------------------------- Services --------------------------- */
 
 .containerServices {
@@ -991,7 +990,7 @@ textarea {
   align-items: center;
   margin: 0;
   padding: 60px 20px;
-  background: #ffffff; /* Fundo branco */
+  background: #ffffff;
   text-align: center;
 }
 
@@ -1132,7 +1131,7 @@ textarea {
 
 #contato {
   padding: 40px;
-  background-color: #fff; /* Fundo branco */
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
@@ -1142,11 +1141,11 @@ textarea {
 
 #contato h2 {
   font-size: 2.5rem;
-  color: #333; /* Cor escura para contraste */
+  color: #333;
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  border-bottom: 2px solid #000; /* Harmonizando com botão contratar */
+  border-bottom: 2px solid #000;
   display: inline-block;
   padding-bottom: 10px;
   text-align: center;
@@ -1260,7 +1259,7 @@ form button:active {
   color: #333;
   justify-content: center;
 }
-.contactContainerNumber{
+.contactContainerNumber {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -1312,6 +1311,10 @@ form button:active {
 .btnUnico:active {
   transform: scale(0.95);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hideContainer {
+  display: none;
 }
 
 /* ---------------------------- Media Queries ---------------------------- */
