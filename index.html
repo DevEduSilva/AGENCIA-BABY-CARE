@@ -30,6 +30,10 @@
 
   <!-- MODAL -->
   <script src="assets/js/modal.js" defer></script>
+
+  <!-- VALORES DA PAGINA  -->
+  <script src="assets/js/valoresDaPaginaPrecos.js" defer></script>
+
 </head>
 
 <body id="inicio">
@@ -119,7 +123,7 @@
     </section>
   </div>
 
-  <!-- Página o que esperar -->
+  <!-- Página o que esperar CORRIGIR AQUI-->
   <div id="whatWait">
     <div class="backgroundwhite">
       <section id="about">
@@ -136,7 +140,7 @@
     </div>
   </div>
 
-  <!-- Página como funciona -->
+  <!-- Página como funciona ARRUMAR CSS AQUI-->
   <div id="servicesHowWorks">
     <section class="containerservicesHowWorks">
       <h2 class="theTitle works">COMO FUNCIONA?</h2>
@@ -155,7 +159,6 @@
 
     </section>
   </div>
-
   <!-- Página valores-->
   <div id="valuePage">
     <div class="backgroundwhite">
@@ -173,15 +176,15 @@
                 <div class="pacote-options">
                   <label>
                     <input type="radio" name="horario" value="diurno">
-                    SEGUNDA A SEXTA DIURNO (7h às 19h)
+                    SEGUNDA A SEXTA DIURNO (entre 7h e 19h)
                   </label>
                   <label>
                     <input type="radio" name="horario" value="noturno">
-                    SEGUNDA A SEXTA NOTURNO (19h às 7h)
+                    SEGUNDA A SEXTA NOTURNO (entre 19h e 7h)
                   </label>
                   <label>
                     <input type="radio" name="horario" value="final-de-semana">
-                    FINAL DE SEMANA E FERIADOS
+                    FINAIS DE SEMANA E FERIADOS
                   </label>
                 </div>
               </div>
@@ -189,18 +192,20 @@
             <div class="containervalues2">
               <div class="pacote-form-group valorDinamico">
                 <label class="subtitleTextValues" for="valor">VALOR</label>
-                <span class="valorSelecionado">R$ <p class="valorValue">300,00</p></span>
+                <span class="valorSelecionado">
+                  <p id="valorValue" class="valorValue">SELECIONE UMA OPÇÃO</p>
+                </span>
               </div>
 
               <div class="pacote-form-group obsImportante">
                 <label class="subtitleTextValues observacoesU" for="observacoes">OBSERVAÇÕES IMPORTANTES</label>
                 <ul>
-                  <li>Hora avulsa é Indicada para ocasiões pontuais, com reserva mínima de 72h
-                    recomendada.</li>
-                  <li>Pagamento será de 50% antecipado no agendamento.</li>
-                  <li>Após 22h ou áreas sem transporte adicional de R$ 30,00.</li>
-                  <li>Acompanhamento para mais de 2 crianças terá adicional de 50%.</li>
-                  <li><strong>Dúvidas</strong>? Fale com a gente pelo WhatsApp</li>
+                  <li>O tempo mínimo de contratação é de 3h;</li>
+                  <li>Indicada para ocasiões pontuais, com reserva mínima de 72h recomendada;</li>
+                  <li>Após 22h ou áreas sem transporte adicional de R$ 30,00;</li>
+                  <li>Pagamento será de 50% antecipado no agendamento;</li>
+                  <li>Acompanhamento para mais de 2 crianças terá adicional de 50%;</li>
+                  <li><strong>Dúvidas</strong>? Fale com a gente pelo WhatsApp!</li>
                 </ul>
               </div>
             </div>
@@ -212,6 +217,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- Página pacotes -->
   <div id="pacotesServices">
@@ -379,6 +385,7 @@
   </footer>
 
   <script src="assets/js/pageContato.js"></script>
+
 </html>
 </body>
 
