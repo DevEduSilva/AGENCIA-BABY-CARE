@@ -11,6 +11,15 @@
   <!-- LINKAGEM DE ICONES -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
+  <!-- LINKAGEM ICONES DO GOOGLE FONTS -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+
+  <!-- linkagem do swiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+
   <!-- ARQUIVOS CSS -->
   <!-- GERAL -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -25,15 +34,20 @@
   <!-- GERAL -->
   <script src="assets/js/header.js" defer></script>
 
-  <!-- Slider -->
-  <script src="assets/js/slider.js" defer></script>
-
   <!-- MODAL -->
   <script src="assets/js/modal.js" defer></script>
 
   <!-- VALORES DA PAGINA  -->
   <script src="assets/js/valoresDaPaginaPrecos.js" defer></script>
 
+  <!-- PÁGINA CONTATO -->
+  <script src="assets/js/pageContato.js" defer></script>
+
+  <!-- LINKAGEM SWIPERJS SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+  <!-- LINKAGEM DE SCRIPT COSTUMIZAVEL -->
+  <script src="assets/js/swiperJS.js" defer></script>
 </head>
 
 <body id="inicio">
@@ -85,11 +99,11 @@
           <img src="assets/img/about.jpg" alt="Imagem sobre nós" />
 
           <div class="">
-            <h3 class="theTitle">Lorem ipsum</h3>
             <p class="theText">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque autem consequuntur magnam ea soluta
-              veritatis ad repellendus odit quidem eos praesentium maxime laudantium qui, sapiente, iure labore ipsam
-              inventore suscipit.
+              Somos uma equipe dedicada a cuidar das crianças com carinho e profissionalismo, oferecendo serviços
+              especializados para atender às necessidades das famílias. Trabalhamos com babás qualificadas, seja para
+              cuidados diários, eventos ou férias, garantindo segurança e bem-estar para as crianças e tranquilidade
+              para os pais.
             </p>
             <br>
             <button class="full-rounded btnCta" id="ctaabout" onclick="">
@@ -111,30 +125,81 @@
     <section class="containerServices">
       <h2 class="theTitle">NOSSOS SERVIÇOS</h2>
 
-      <div class="mobile-slider">
-        <div class="card-container">
-          <div class="card-inner">1</div>
-          <div class="card-inner">2</div>
-          <div class="card-inner">3</div>
-          <div class="card-inner">4</div>
+      <div class="container swiper">
+        <div class="card-wrapper">
+          <ul class="card-list swiper-wrapper">
+            <li class="card-item swiper-slide">
+              <a onclick="goToSection('servicesHowWorks')" class="card-link">
+                <img src="assets/img/baba-folguista.jpg" alt="Card Image" class="card-image">
+                <p class="badge">Babás</p>
+                <h2 class="card-title">Babás folguistas disponiveis</h2>
+                <button class="card-button material-symbols-outlined">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a onclick="goToSection('servicesHowWorks')" class="card-link">
+                <img src="assets/img/baba-ferias.jpg" alt="Card Image" class="card-image">
+                <p class="badge babaOne">Babás</p>
+                <h2 class="card-title">Babás para férias das crianças</h2>
+                <button class="card-button material-symbols-outlined">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a onclick="goToSection('servicesHowWorks')" class="card-link">
+                <img src="assets/img/baba-folguistaparaeventos.jpg" alt="Card Image" class="card-image">
+                <p class="badge babaTwo">Babás</p>
+                <h2 class="card-title"> Para eventos em geral</h2>
+                <button class="card-button material-symbols-outlined">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a onclick="goToSection('servicesHowWorks')" class="card-link">
+                <img src="assets/img/baba-selecao.jpg" alt="Card Image" class="card-image">
+                <p class="badge babaThree">Babás</p>
+                <h2 class="card-title">Seleção de babás profissionais</h2>
+                <button class="card-button material-symbols-outlined">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a onclick="goToSection('servicesHowWorks')" class="card-link">
+                <img src="assets/img/baba-assesoria.jpg" alt="Card Image" class="card-image">
+                <p class="badge babaFour">Babás</p>
+                <h2 class="card-title">Assesoria Juridica e contábil </h2>
+                <button class="card-button material-symbols-outlined">
+                  arrow_forward
+                </button>
+              </a>
+            </li>
+          </ul>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
         </div>
       </div>
-
     </section>
   </div>
 
-  <!-- Página o que esperar CORRIGIR AQUI-->
+  <!-- Página o que esperar-->
   <div id="whatWait">
     <div class="backgroundwhite">
       <section id="about">
         <h2 class="theTitle">O QUE ESPERAR DE NOSSAS BABÁS?</h2>
         <div class="options-container">
-          <button class="button">Qualidade 1</button>
-          <button class="button">Qualidade 2</button>
-          <button class="button">Qualidade 3</button>
-          <button class="button">Qualidade 4</button>
-          <button class="button">Qualidade 5</button>
-          <button class="button">Qualidade 6</button>
+          <button class="button">PONTUALIDADE</button>
+          <button class="button">HIGIENE</button>
+          <button class="button">EXPERIÊNCIA</button>
+          <button class="button">CARINHO E CUIDADO COM SEU BEBÊ</button>
+          <button class="button">PACIÊNCIA E ATENÇÃO COM PAIS E FILHOS</button>
+          <button class="button">SERVIÇO DE QUALIDADE</button>
         </div>
       </section>
     </div>
@@ -148,11 +213,11 @@
 
       <div class="containerOptionsType">
         <div class="typeOption" onclick="goToSection('valuePage')">
-          <img src="assets/img/about.jpg" alt="" class="imgOptionType">
+          <img src="assets/img/avulsa.jpg" alt="" class="imgOptionType">
           <p class="subtitleOptionType">HORA AVULSA</p>
         </div>
         <div class="typeOption" onclick="goToSection('pacotesServices')">
-          <img src="assets/img/about.jpg" alt="" class="imgOptionType">
+          <img src="assets/img/pacotes.jpg" alt="" class="imgOptionType">
           <p class="subtitleOptionType">PACOTES</p>
         </div>
       </div>
@@ -194,7 +259,7 @@
               <div class="pacote-form-group valorDinamico">
                 <label class="subtitleTextValues" for="valor">VALOR</label>
                 <span class="valorSelecionado">
-                  <p id="valorValue" class="valorValue">SELECIONE UMA OPÇÃO</p>
+                  <p id="valorValue" class="valorValue" style="font-weight: bold;">SELECIONE UMA OPÇÃO</p>
                 </span>
               </div>
 
@@ -385,7 +450,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/pageContato.js"></script>
 
 </html>
 </body>

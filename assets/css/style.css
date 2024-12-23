@@ -549,23 +549,60 @@ main button:hover .border {
   box-sizing: border-box;
 }
 
-.button {
-  background-color: #cacaca;
+.options-container .button {
+  background-color: #CEDFF5;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
   color: black;
   font-size: 16px;
-  font-weight: bold;
   border: none;
   border-radius: 6px;
   height: 60px;
   width: 100%;
   padding: 0 32px;
-  transition: filter 0.2s, transform 0.2s;
-  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: waveEffect 3s linear infinite;
+  pointer-events: none; /* Evita cliques */
+  cursor: default;
 }
 
-.button:not(:disabled):hover {
-  filter: brightness(0.8);
-  transform: scale(1.05);
+/* Animação progressiva */
+.options-container .button:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.options-container .button:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.options-container .button:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.options-container .button:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+.options-container .button:nth-child(5) {
+  animation-delay: 2s;
+}
+
+.options-container .button:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+@keyframes waveEffect {
+  0%, 100% {
+    background-color: #CEDFF5;
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    background-color: #B3D3F0;
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
 }
 
 /* PARA DISPOSITIVOS MÓVEIS */
@@ -586,7 +623,7 @@ main button:hover .border {
     max-width: 90%;
   }
 
-  .button {
+  .options-container .button {
     font-size: 14px;
     height: 50px;
     padding: 0 20px;
@@ -610,7 +647,7 @@ main button:hover .border {
     max-width: 700px;
   }
 
-  .button {
+  .options-container .button {
     font-size: 15px;
     height: 55px;
     padding: 0 24px;
@@ -633,12 +670,14 @@ main button:hover .border {
     max-width: 1000px;
   }
 
-  .button {
+  .options-container .button {
     font-size: 18px;
     height: 70px;
     padding: 0 32px;
   }
 }
+
+
 
 /* ------------------------------HowWorks------------------------------ */
 
