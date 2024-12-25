@@ -338,11 +338,14 @@
             <button class="btnUnico trabalharUnico">TRABALHAR COMO BABÁ</button>
           </form>
 
-          <form id="meuFormulario" class="hide">
+          <form id="meuFormulario" class="hide" action="./assets/php/enviarEmail.php" method="POST">
             <h3>INFORMAÇÕES NECESSÁRIAS:</h3>
 
             <label for="nome">Nome completo:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            
+            <label for="nome">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu email" required>
 
             <label for="telefone">Telefone:</label>
             <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
@@ -354,7 +357,7 @@
             <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="9" required>
 
             <label for="datas-horarios">Descreva as datas e horários que precisa da babá:</label>
-            <textarea id="datas-horarios" name="datas-horarios" placeholder="Exemplo: Segunda e Quarta das 14h às 18h"
+            <textarea id="datas-horarios" name="mensagem" placeholder="Exemplo: Segunda e Quarta das 14h às 18h"
               rows="4" required></textarea>
 
             <label style="display: flex; align-items: center; gap: 10px;">
