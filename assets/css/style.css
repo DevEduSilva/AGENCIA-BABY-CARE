@@ -1011,75 +1011,88 @@ textarea {
 
 /* ------------------------- Página Pacotes ------------------------- */
 
-#pacotesServices .theTitle {
-  font-size: 2.5rem;
-  margin-top: 2vh;
-  color: #333333;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+#pacotesServices {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
   text-align: center;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
 }
 
 .containerPacotesServices {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 60px 20px;
-  background: #ffffff;
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.subtitlePacotes {
+.theTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 40px;
+}
+
+.pacotesNaSemana {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.pacote {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 30px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.pacote h3 {
   font-size: 1.8rem;
   font-weight: bold;
   color: #4f81c7;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-.pacotesNaSemana,
-.mensal {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 50px;
-  width: 100%;
+.pacote p {
+  font-size: 1.1rem;
+  color: #666666;
+  line-height: 1.5;
 }
 
-.fimDeSemana,
-.semanal,
-.qtdSemanal {
-  background: #f9f9f9;
+.pacoteMensal {
+  background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 10px;
-  padding: 20px;
-  width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #333333;
+  padding: 30px;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.fimDeSemana:hover,
-.semanal:hover,
-.qtdSemanal:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.pacoteMensal h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4f81c7;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.valoresPacotes {
-  font-size: 1.2rem;
-  font-weight: 600;
+.pacoteMensal p {
+  font-size: 1.1rem;
   color: #666666;
-  margin: 10px 0;
+  line-height: 1.5;
 }
 
-/* Botão */
+/* Botão de Contato */
 .pacote-button {
   font-size: 1.3rem;
   font-weight: bold;
@@ -1091,7 +1104,7 @@ textarea {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .pacote-button:hover {
@@ -1103,30 +1116,30 @@ textarea {
   transform: scale(0.95);
 }
 
-/* Responsividade */
+/* ------------------------- Responsividade ------------------------- */
 
 /* Dispositivos móveis */
 @media screen and (max-width: 767px) {
-  .pacotesNaSemana,
-  .mensal {
+  .pacotesNaSemana {
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
 
-  .fimDeSemana,
-  .semanal,
-  .qtdSemanal {
+  .pacote {
     width: 80%;
   }
 
-  #pacotesServices .theTitle {
+  .pacoteMensal {
+    width: 90%;
+  }
+
+  .theTitle {
     font-size: 2rem;
     letter-spacing: 1px;
   }
 
-  .subtitlePacotes {
-    font-size: 1.6rem;
+  .pacote h3 {
+    font-size: 1.5rem;
   }
 
   .pacote-button {
@@ -1136,15 +1149,16 @@ textarea {
 
 /* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .pacotesNaSemana,
-  .mensal {
+  .pacotesNaSemana {
     gap: 25px;
   }
 
-  .fimDeSemana,
-  .semanal,
-  .qtdSemanal {
+  .pacote {
     width: 45%;
+  }
+
+  .pacoteMensal {
+    width: 70%;
   }
 
   .pacote-button {
@@ -1154,15 +1168,16 @@ textarea {
 
 /* Grandes telas */
 @media screen and (min-width: 1200px) {
-  .pacotesNaSemana,
-  .mensal {
+  .pacotesNaSemana {
     gap: 40px;
   }
 
-  .fimDeSemana,
-  .semanal,
-  .qtdSemanal {
+  .pacote {
     width: 300px;
+  }
+
+  .pacoteMensal {
+    width: 60%;
   }
 }
 
