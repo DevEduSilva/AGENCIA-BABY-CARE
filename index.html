@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agência Baby Care - Babás Qualificadas para o Cuidado e Bem-Estar de Sua Família</title>
   <meta name="description"
-    content="Encontre babás qualificadas com segurança e confiança para cuidar de sua família. Profissionais experientes e dedicados para o bem-estar de seus filhos." />
+    content="Encontre babás qualificadas com segurança e confiança para cuidar de sua família. Profissionais experientes e dedicados para o bem-estar de seus filhos.|" />
   <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
 
   <!-- Font Awesome -->
@@ -22,10 +22,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
   <!-- Estilos Gerais -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/slider.css">
-  <link rel="stylesheet" href="assets/css/header.css" />
-  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 
   <!-- ------------------------- Arquivos JS ------------------------- -->
 
@@ -38,6 +38,12 @@
   <!-- SwiperJS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="assets/js/swiperJS.js" defer></script>
+
+  <!-- Jquery Mask -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+  <script src="assets/js/JqueryMask.js"></script>
+
 </head>
 
 <body id="inicio">
@@ -335,16 +341,18 @@
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
 
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
+            <input type="tel" id="telefone" name="telefone" class="input-telefone" placeholder="(XX) XXXXX-XXXX"
+              maxlength="15" required>
 
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Digite seu email" required>
+            <input type="text" id="email" name="email" class="input-email" placeholder="Digite seu email" required>
+            <span class="emailError"></span>
 
             <label for="endereco">Endereço completo:</label>
             <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço completo" required>
 
             <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="" required>
+            <input type="text" id="cep" name="cep" class="input-cep" placeholder="XXXXX-XXX" maxlength="" required>
 
             <label for="datas-horarios">Descreva as datas e horários que precisa da babá:</label>
             <textarea id="mensagem" name="mensagem" placeholder="Exemplo: Segunda e Quarta das 14h às 18h" rows="4"
@@ -370,16 +378,19 @@
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
 
             <label for="telefone">Telefone para contato:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
+            <input type="tel" id="telefone" name="telefone" class="input-telefone" placeholder="(XX) XXXXX-XXXX"
+              maxlength="15" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+            <input type="email" id="email" name="email" class="input-email" placeholder="Digite seu email" required>
+            <span class="emailError"></span>
+
 
             <label for="endereco">Endereço completo:</label>
             <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço completo" required>
 
             <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="9" required>
+            <input type="text" id="cep" name="cep" class="input-cep" placeholder="XXXXX-XXX" maxlength="9" required>
 
             <label for="experiencia">Tem experiência como babá?</label>
             <select id="experiencia" name="experiencia" required>
