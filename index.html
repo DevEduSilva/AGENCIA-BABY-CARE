@@ -338,27 +338,27 @@
             <button class="btnUnico trabalharUnico">TRABALHAR COMO BABÁ</button>
           </form>
 
-          <form id="meuFormulario" class="hide" action="./php/enviarEmail.php" method="POST">
+          <form id="meuFormulario" class="hide" action="./php/envioCliente.php" method="POST">
             <h3>INFORMAÇÕES NECESSÁRIAS:</h3>
 
             <label for="nome">Nome completo:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-            
-            <label for="nome">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Digite seu email" required>
 
             <label for="telefone">Telefone:</label>
             <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu email" required>
 
             <label for="endereco">Endereço completo:</label>
             <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço completo" required>
 
             <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="9" required>
+            <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX" maxlength="" required>
 
             <label for="datas-horarios">Descreva as datas e horários que precisa da babá:</label>
-            <textarea id="datas-horarios" name="mensagem" placeholder="Exemplo: Segunda e Quarta das 14h às 18h"
-              rows="4" required></textarea>
+            <textarea id="mensagem" name="mensagem" placeholder="Exemplo: Segunda e Quarta das 14h às 18h" rows="4"
+              required></textarea>
 
             <label style="display: flex; align-items: center; gap: 10px;">
               <input type="checkbox" id="accept" name="accept" required>
@@ -367,12 +367,13 @@
 
             <div class="formButtons">
               <button class="btnback" type="button" onclick="voltar()">Voltar</button>
-              <button class="btnSend" type="submit">ENVIAR</button>
+              <button class="btnSend" type="submit" name="enviar">ENVIAR</button>
             </div>
 
           </form>
 
-          <form id="formularioBabá" class="hide">
+          <form id="formularioBabá" class="hide" action="./php/envioFuncionario.php" method="POST"
+            enctype="multipart/form-data">
             <h3>FICHA DE DADOS PARA BÁBAS:</h3>
 
             <label for="nome">Nome completo:</label>
@@ -380,6 +381,9 @@
 
             <label for="telefone">Telefone para contato:</label>
             <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
             <label for="endereco">Endereço completo:</label>
             <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço completo" required>
@@ -397,27 +401,25 @@
             <label>Disponibilidade para trabalhar em qual horário:</label>
             <div>
               <label>
-                <input type="checkbox" name="disponibilidade" value="manhã">
-                Manhã
+                <input type="checkbox" name="disponibilidade[]" value="manhã"> Manhã
               </label>
               <label>
-                <input type="checkbox" name="disponibilidade" value="tarde">
-                Tarde
+                <input type="checkbox" name="disponibilidade[]" value="tarde"> Tarde
               </label>
               <label>
-                <input type="checkbox" name="disponibilidade" value="noite">
-                Noite
+                <input type="checkbox" name="disponibilidade[]" value="noite"> Noite
               </label>
             </div>
 
             <label for="curriculo">Anexar currículo:</label>
-            <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+            <input type="file" id="curriculo" name="curriculo" accept=".pdf" required>
 
             <div class="formButtons">
               <button class="btnback" type="button" onclick="voltar()">Voltar</button>
-              <button class="btnSend" type="submit">ENVIAR</button>
+              <button class="btnSend" type="submit" name="enviar">ENVIAR</button>
             </div>
           </form>
+
 
           <div class="contact-info">
             <div class="contact-item">
@@ -454,7 +456,6 @@
   </footer>
 
 
-</html>
 </body>
 
 </html>
