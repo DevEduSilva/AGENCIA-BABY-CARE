@@ -190,6 +190,7 @@ main button:hover .border {
 /* PARA TELAS GRANDES */
 @media (min-width: 1367px) {
   main {
+    height: 80vh;
     flex-direction: row;
     gap: 150px;
   }
@@ -380,6 +381,7 @@ main button:hover .border {
     width: 100%;
   }
 }
+
 #modal-overlay {
   display: none;
   position: fixed;
@@ -520,6 +522,18 @@ main button:hover .border {
   color: black;
 }
 
+@media screen and (max-width: 767px) {
+  .containerServices {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1367px) {
+  .containerServices {
+    height: 60vh;
+  }
+}
+
 /* --------------------------- whatWait --------------------------- */
 #whatWait #about {
   height: 80vh;
@@ -550,7 +564,7 @@ main button:hover .border {
 }
 
 .options-container .button {
-  background-color: #CEDFF5;
+  background-color: #cedff5;
   font-family: "Nunito", sans-serif;
   letter-spacing: 2px;
   font-weight: 600;
@@ -593,13 +607,14 @@ main button:hover .border {
 }
 
 @keyframes waveEffect {
-  0%, 100% {
-    background-color: #CEDFF5;
+  0%,
+  100% {
+    background-color: #cedff5;
     transform: scale(1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   50% {
-    background-color: #B3D3F0;
+    background-color: #b3d3f0;
     transform: scale(1.02);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
   }
@@ -676,8 +691,6 @@ main button:hover .border {
     padding: 0 32px;
   }
 }
-
-
 
 /* ------------------------------HowWorks------------------------------ */
 
@@ -1017,13 +1030,12 @@ textarea {
   text-align: center;
 }
 
-.containerPacotesServices {
+#pacotesServices .containerPacotesServices {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-.theTitle {
+#pacotesServices .theTitle {
   font-size: 2.5rem;
   font-weight: bold;
   color: #333333;
@@ -1035,9 +1047,9 @@ textarea {
 .pacotesNaSemana {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .pacote {
@@ -1045,12 +1057,13 @@ textarea {
   border: 1px solid #dddddd;
   border-radius: 10px;
   padding: 30px;
-  width: 280px;
+  flex: 1 1 calc(33.333% - 20px); 
+  min-height: 159px;
+  max-width: 300px; 
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .pacote h3 {
   font-size: 1.8rem;
@@ -1071,9 +1084,9 @@ textarea {
   border: 1px solid #dddddd;
   border-radius: 10px;
   padding: 30px;
-  width: 80%;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -1116,34 +1129,49 @@ textarea {
   transform: scale(0.95);
 }
 
+/* Botão Principal */
+.cta-button {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4f81c7;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 30px;
+}
+
+.cta-button:hover {
+  background-color: #3d6bae;
+  transform: scale(1.05);
+}
+
 /* ------------------------- Responsividade ------------------------- */
 
 /* Dispositivos móveis */
 @media screen and (max-width: 767px) {
   .pacotesNaSemana {
     flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
   .pacote {
-    width: 80%;
+    flex: 1 1 100%; /* Ocupar 100% da largura disponível */
+    max-width: none;
   }
 
   .pacoteMensal {
-    width: 90%;
+    width: 83%;
+    /* max-width: 381px; */
   }
 
-  .theTitle {
+  #pacotesServices .theTitle {
     font-size: 2rem;
     letter-spacing: 1px;
-  }
-
-  .pacote h3 {
-    font-size: 1.5rem;
-  }
-
-  .pacote-button {
-    width: 100%;
   }
 }
 
@@ -1154,15 +1182,11 @@ textarea {
   }
 
   .pacote {
-    width: 45%;
+    flex: 1 1 calc(50% - 20px); /* Duas colunas */
   }
 
   .pacoteMensal {
     width: 70%;
-  }
-
-  .pacote-button {
-    width: auto;
   }
 }
 
@@ -1173,7 +1197,7 @@ textarea {
   }
 
   .pacote {
-    width: 300px;
+    flex: 1 1 calc(33.333% - 20px); /* Três colunas */
   }
 
   .pacoteMensal {
