@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Agradecimento</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrigado por Confiar na Agência Baby Care!</title>
+    <meta name="description"
+        content="Sua mensagem foi recebida! Agradecemos a confiança e em breve entraremos em contato. Conheça mais sobre como cuidamos do bem-estar da sua família." />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             background-color: #f0f8ff;
-            /* Azul claro */
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         .thankyou-container {
@@ -25,24 +33,24 @@
 
         .thankyou-card {
             background: #ffffff;
-            /* Branco */
             border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
             padding: 2rem;
             max-width: 500px;
             margin: auto;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUpFadeIn 1s ease forwards;
         }
 
         .thankyou-card h1 {
             color: #4682b4;
-            /* Azul aço */
             font-size: 2rem;
             margin-bottom: 1rem;
         }
 
         .thankyou-card p {
             color: #5f9ea0;
-            /* Azul cadete */
             margin-bottom: 2rem;
             font-size: 1.1rem;
         }
@@ -50,18 +58,29 @@
         .thankyou-card .button {
             display: inline-block;
             background: #4682b4;
-            /* Azul aço */
             color: #fff;
             text-decoration: none;
             padding: 0.5rem 1.5rem;
             border-radius: 30px;
             font-size: 1rem;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .thankyou-card .button:hover {
             background: #5f9ea0;
-            /* Azul cadete */
+            transform: scale(1.05);
+        }
+
+        @keyframes slideUpFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
