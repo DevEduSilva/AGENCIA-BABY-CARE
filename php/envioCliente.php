@@ -29,9 +29,10 @@ if (isset($_POST["enviar"])) {
         $mail->CharSet = 'UTF-8';                                    // Set charset to UTF-8
 
         // Recipients
-        $mail->setFrom('agenciababycare2024@gmail.com', 'Agência Baby Care');
-        $mail->addAddress('agenciababycare2024@gmail.com', 'Agência Baby Care');
-        $mail->addReplyTo('agenciababycare2024@gmail.com', 'Informações');
+        $mail->setFrom($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
+        $mail->addAddress($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
+        // $mail->addAddress('babycareagenciadebabas@gmail.com', 'CONTATO Agência Baby Care');
+        $mail->addReplyTo($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
 
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML

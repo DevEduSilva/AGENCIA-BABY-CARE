@@ -20,7 +20,7 @@ if (isset($_POST["enviar"])) {
         $mail->isSMTP();                                            // Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                        // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                    // Enable SMTP authentication
-        $mail->Username   = 'agenciababycare2024@gmail.com';          // SMTP username
+        $mail->Username   = $_ENV['SMTP_USERNAME'];          // SMTP username
         $mail->Password   = $_ENV['SMTP_PASSWORD'];                  // SMTP password (from .env file)
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;             // Enable implicit TLS encryption
         $mail->Port       = 465;                                     // TCP port to connect to; use 587 if using STARTTLS
@@ -30,9 +30,12 @@ if (isset($_POST["enviar"])) {
 
 
         // Recipients
-        $mail->setFrom('agenciababycare2024@gmail.com', 'Agência Baby Care');
-        $mail->addAddress('agenciababycare2024@gmail.com', 'Agência Baby Care');
-        $mail->addReplyTo('agenciababycare2024@gmail.com', 'Informações');
+        // Recipients
+        $mail->setFrom($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
+        $mail->addAddress($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
+        // $mail->addAddress('babycareagenciadebabas@gmail.com', 'CONTATO Agência Baby Care');
+        $mail->addReplyTo($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
+
 
         // Attachments
         if (isset($_FILES['curriculo']) && $_FILES['curriculo']['error'] === UPLOAD_ERR_OK) {
