@@ -33,7 +33,7 @@ if (isset($_POST["enviar"])) {
         // Recipients
         $mail->setFrom($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
         $mail->addAddress($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
-        // $mail->addAddress('babycareagenciadebabas@gmail.com', 'CONTATO Agência Baby Care');
+        $mail->addAddress('babycareagenciadebabas@gmail.com', 'CONTATO Agência Baby Care');
         $mail->addReplyTo($_ENV['SMTP_USERNAME'], 'Agência Baby Care');
 
 
