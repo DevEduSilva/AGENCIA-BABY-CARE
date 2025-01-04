@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #508ddb;
+  background-color: #B0D7F6;
   font-family: "Nunito", sans-serif;
 }
 
@@ -71,7 +71,6 @@ body {
 /* ------------------------------- MAIN ------------------------------- */
 
 main {
-  background-color: #508ddb;
   height: 90vh;
   width: 100%;
   display: flex;
@@ -94,7 +93,7 @@ article {
 .theTitle {
   font-size: 3.5rem;
   text-align: center;
-  color: #b0d7f6;
+  color: #2d6cc0;
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
 }
